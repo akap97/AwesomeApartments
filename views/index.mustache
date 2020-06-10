@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{>head}}
+
+<body class=" ">
+{{>nav}}
+<div class="main-container ">
+    <section class="text-center height-80 imagebg" data-overlay="4">
+        <div class="background-image-holder">
+            <img alt="background" src="/images/city.jpg"/>
+            <div style="width:100%; height:100%; z-index:9999; background-color:rgba(0,0,0,0.5)"></div>
+        </div>
+            <div class="container pos-vertical-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="typed-headline">
+                            <span class="h1 inline-block">Awesome Apartments -</span>
+                            <span class="h1 inline-block typed-text typed-text--cursor color--primary" data-typed-strings="No Brokerage Fees, Cheap Rates, Lowest Downpayment, Bachelor Friendly"></span>
+                        </div>
+                        <p class="lead">
+                            Awesome Apartments offers high quality student housing just blocks away from you with no brokerage fees ever! We are not real estate agents we own and manage all our buildings and pass the savings to you.
+                        </p>
+                    </div>
+                </div>
+                        <!--end of row-->
+            </div>
+                <!--end of container-->
+    </section>
+    <section class=" ">
+        <div class="container">
+            <div class="row">
+                {{#data}}
+                    {{>areaSmall}}
+                {{/data}}
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+</div>
+{{>footer}}
+{{>scripts}}
+</body>
+</html>

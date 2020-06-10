@@ -1,0 +1,58 @@
+<div style="margin-left:50px;margin-right:50px;">
+    <div class="row">
+        <div class="col-md-5">
+            {{^remoteImages}}
+            <a href="https://lh3.googleusercontent.com/r5eNZwqzEODw6JpAaQ5YZL6fxrJAQ7u1kzjt0ThuLUSUc4vXoTMEekbgg0-aBv6W5gL0eymwE-mXYvw2R9LKGPTL7g" data-lightbox="true">
+            <img alt="Thumb" src="https://lh3.googleusercontent.com/r5eNZwqzEODw6JpAaQ5YZL6fxrJAQ7u1kzjt0ThuLUSUc4vXoTMEekbgg0-aBv6W5gL0eymwE-mXYvw2R9LKGPTL7g"  />
+            </a>
+            {{/remoteImages}}
+            {{#bigimage}}
+            <a href="{{url}}" data-lightbox="Gallery 1">
+            <img alt="Thumb" src="{{url}}" style="width:500px ;height:300px;"/>
+            </a>
+            {{/bigimage}}
+        </div>
+        <div class="col-md-7">
+            <form action="/apartment/{{_id}}" method="post">
+                <div class="col-md-12">
+                    <label>Apartment Description:</label>
+                    <textarea name="desc" >{{desc}}</textarea>
+                </div>
+                <div class="col-md-4">
+                    <label>Price:</label>
+                    <input type="text" name="price" value="{{price}}" />
+                </div>
+                <div class="col-md-3">
+                    <label>Bedrooms:</label>
+                    <div class="input-number">
+                        <input type="number" name="numBed" placeholder="Quantity" value="{{numBed}}" min="0" max="10" />
+                        <div class="input-number__controls">
+                            <span class="input-number__increase"><i class="stack-up-open"></i></span>
+                            <span class="input-number__decrease"><i class="stack-down-open"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label>Bathrooms:</label>
+                    <div class="input-number">
+                        <input type="number" name="numBath" placeholder="Quantity" value="{{numBath}}" min="1" max="10" />
+                        <div class="input-number__controls">
+                            <span class="input-number__increase"><i class="stack-up-open"></i></span>
+                            <span class="input-number__decrease"><i class="stack-down-open"></i></span>
+                        </div>
+                    </div>  
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+            {{#remoteImages}}
+            <a href="{{url}}" data-lightbox="Gallery 1">
+            <img alt="Thumb" src="{{url}}" style="width:200px;height:200px" />
+            </a>
+            {{/remoteImages}}
+        <button type="submit" class="btn-upload" id="{{_id}}">Upload Photo</button>
+    </div>
+</div>
+		

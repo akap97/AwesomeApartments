@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{>head}}
+
+<body class=" ">
+{{>nav}}
+<div class="main-container ">
+<h1>{{name}}{{state}}{{city}} </h1>
+<br/>{{#apartments}}
+    {{>apartmentview}}
+    {{/apartments}}
+<a href="/edit/{{slug}}">CREATE/EDIT YOUR PROPERTY</a>
+{{>footer}}
+{{>scripts}}
+</body>
+</html>
